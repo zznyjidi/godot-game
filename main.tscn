@@ -13,6 +13,7 @@ size = Vector2(560, 20)
 size = Vector2(20, 447)
 
 [node name="Main" type="Node2D"]
+position = Vector2(261, 638)
 
 [node name="WallLeft" type="StaticBody2D" parent="."]
 
@@ -33,5 +34,5 @@ position = Vector2(517, -223.5)
 shape = SubResource("RectangleShape2D_qpa6o")
 
 [node name="Player" parent="." instance=ExtResource("1_l2jt2")]
-position = Vector2(67, -45)
+position = Vector2(113, -202)
 script = ExtResource("2_pr28t")
