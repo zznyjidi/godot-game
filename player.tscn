@@ -1,6 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://fpd2cajaa87v"]
+[gd_scene load_steps=5 format=3 uid="uid://fpd2cajaa87v"]
 
 [ext_resource type="Texture2D" uid="uid://d36gul22xngn0" path="res://assets/idle1.png" id="1_py6x0"]
+[ext_resource type="Texture2D" uid="uid://db5vcsrdb61oh" path="res://assets/idle2.png" id="2_57tuo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vka4r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_py6x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_57tuo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvjlt"]
 size = Vector2(108, 154)
@@ -9,8 +24,10 @@ size = Vector2(108, 154)
 scale = Vector2(0.5, 0.5)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_py6x0")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vka4r")
+animation = &"idle"
+frame_progress = 0.0855508
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, -1)
